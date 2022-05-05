@@ -3,7 +3,9 @@
     <TheHeader />
     <button @click="setSelectedComponent('ActiveGoals')">Active</button>
     <button @click="setSelectedComponent('ManageGoals')">Manage</button>
-    <component :is="selectedComponent"></component>
+    <keep-alive>
+        <component :is="selectedComponent"></component>
+    </keep-alive>
 </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
         };
     },
     methods: {
-        setSelectedComponent(cmp){
+        setSelectedComponent(cmp) {
             this.selectedComponent = cmp;
         }
     }
