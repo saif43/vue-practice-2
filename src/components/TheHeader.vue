@@ -15,7 +15,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #14005e;
+    background-color: #000000;
   }
 
   header h1 {
